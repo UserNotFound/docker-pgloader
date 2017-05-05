@@ -1,2 +1,2 @@
 #Procfile
-migrate: pgloader -v /pgloader/migrate.load
+migrate: pgloader -v /app/migrate.load
