@@ -1,5 +1,8 @@
 #Dockerfile
 FROM dimitri/pgloader
 
-RUN mkdir /pgloader
-COPY migrate.load /pgloader/
+
+ADD . /app
+WORKDIR /app
+
+RUN set -a && . /app/.aptible.env && sh getenv.sh

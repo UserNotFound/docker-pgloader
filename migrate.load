@@ -1,6 +1,6 @@
 load database
-    from ${MYSQL}
-    into ${PSQL}?sslmode=require
+    from __MYSQL_SERVER__
+    into __PSQL_SERVER__?sslmode=require
 
  WITH include drop, create tables, no truncate,
     create indexes, reset sequences, foreign keys
