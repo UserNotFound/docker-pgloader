@@ -1,0 +1,9 @@
+load database
+    from ${MYSQL}
+    into ${PSQL}?sslmode=require
+
+ WITH include drop, create tables, no truncate,
+    create indexes, reset sequences, foreign keys
+
+ BEFORE LOAD DO
+ $$ create schema if not exists db; $$;
